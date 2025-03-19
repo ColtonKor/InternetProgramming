@@ -1,0 +1,101 @@
+h3{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: #71a9df;
+    text-align: center;
+    font-size: 1em;
+    width: 25%;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    margin-bottom: 50px;
+}
+a:hover{
+    transform: scale(2);
+    background-color: rgb(190, 207, 31);
+    accent-color: orange;
+}
+#programsBox{
+    display: flex;
+    justify-content: center;
+}
+.programImage{
+    width: 300px;
+    height: 300px;
+    border: 5px solid black;
+}
+.ButtonLinks:hover{
+    transform: scale(1.2);
+}
+body{
+    background-color: black;
+}
+
+.currentPage{
+    background-color: darkred;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    font-family: "Papyrus", fantasy;
+    accent-color: orange;
+}
+hr{
+    border: 1px dashed white;
+}
+
+footer{
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.footer-image {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.footer-text {
+    display: inline-block;
+}
+
+p{
+    color: white;
+    font-family: "Papyrus", fantasy;
+    font-size: 25px;
+}
+
+.Source {
+    text-decoration: underline;
+    color: rgb(88, 157, 221);
+    background-color: inherit;
+    text-align: center;
+    width: auto;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    border: none;
+    margin-bottom: 0;
+}
+
+.Source:hover {
+    transform: none;
+    background-color: inherit;
+}
+
+li{
+    color: white;
+    font-family: "Papyrus", fantasy;
+    font-size: 20px;
+}
+
+strong{
+    text-decoration: underline;
+}

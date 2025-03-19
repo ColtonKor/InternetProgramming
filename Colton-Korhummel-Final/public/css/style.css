@@ -1,0 +1,4 @@
+#across, #q2Choices{
+    display: flex;
+    justify-content: space-evenly;
+}

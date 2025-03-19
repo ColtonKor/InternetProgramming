@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <%-include("partials/nav.ejs")%>
+    <h1>Home Page</h1>
+
+    <h2>Today's Top 5</h2>
+
+    <div id="across">
+        <% for (let poke of pokemon) { %>
+            <figure>
+                Score: <%- poke.score %> <br>
+                <img src="../img/img/<%- poke.imgName %>"> <br>
+                Name: <%- poke.name %> 
+            </figure>
+        <%}%>      
+    </div>
+
+
+
+
+
+    
+    <table border="1" width="600" cellpadding="10px">
+        <tbody>
+          <tr>
+            <th>#</th>
+            <th>Task Description</th>
+            <th>Points</th>
+          </tr>
+          <tr style="color:green">
+            <td>1</td>
+            <td>The <strong>Home</strong> page displays the top five monsters from the database in a horizontal layout (as shown).<br></td>
+            <td width="20" align="center">30</td>
+          </tr>
+          <tr style="color:red">
+            <td>2</td>
+            <td>On the <strong>Home</strong> page, all corresponding monster data is displayed in a modal window when clicking on its image<br></td>
+            <td width="20" align="center">30</td>
+          </tr>
+          <tr style="color:green">
+            <td>3</td>
+            <td>On the <strong>Monster List</strong> page, users are able to add new monsters by submitting the form.<br></td>
+            <td width="20" align="center">30</td>
+          </tr>
+          <tr style="color:green">
+            <td>4</td>
+            <td>The <strong>Monster List</strong> page, shows all monsters from the database ordered alphabetically with ALL information included, as shown.<br></td>
+            <td width="20" align="center">20</td>
+          </tr>
+          <tr style="color:red">
+            <td>5</td>
+            <td>On the <strong>Monster List</strong> page, there is an "Update" link next to each score value. Users are able to update the corresponding score. <br></td>
+            <td width="20" align="center">30</td>
+          </tr>
+          <tr style="color:green">
+            <td>6</td>
+            <td>The <strong>Quiz</strong> page shows a random Pokemon <br>
+            </td>
+            <td width="20" align="center">25</td>
+          </tr>
+          <tr style="color:red">
+            <td>7</td>
+            <td>On the <strong>Quiz</strong> page, the values of the multiple choices come from the database and are displayed in random order. <br>
+            </td>
+            <td width="20" align="center">15</td>
+          </tr>
+          <tr style="color:green">
+            <td>8</td>
+            <td>On the <strong>Quiz</strong> page, there is color-coded feedback indicating whether the answer is right or wrong.<br></td>
+            <td width="20" align="center">15</td>
+          </tr>
+          <tr style="color:red">
+            <td>9</td>
+            <td>On the <strong>Quiz</strong> page, the question is graded via Web API (the API should receive the user's answers and return whether the answer was right or wrong).<br></td>
+            <td width="20" align="center">30</td>
+          </tr>
+          <tr style="color:green">
+            <td>10</td>
+            <td>There is a menu for "Home", "Monster List", and "Quiz" across all pages.</td>
+            <td width="20" align="center">10</td>
+          </tr>
+          <tr style="color:red">
+            <td>11</td>
+            <td>Your submission has a nice style using Bootstrap or CSS in an external file with at least 10 properties.</td>
+            <td width="20" align="center">10</td>
+          </tr>
+          <tr style="color:green">
+            <td>12</td>
+            <td>This rubric is properly included and updated.</td>
+            <td width="20" align="center">3</td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>TOTAL </td>
+            <td width="20" align="center">133</td>
+          </tr>
+        </tbody>
+      </table>
+
+    
+
+    <footer>
+        Colton Korhummel Final
+    </footer>
+</body>
+</html>

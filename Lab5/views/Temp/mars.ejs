@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include("partials/head.ejs")%>
+</head>
+<body>
+
+    <%-include("partials/nav.ejs")%>
+    <h2>Mars</h2>
+    <%-mars.description %>
+
+    <img src="<%-mars.image %>" id="smallMars">
+
+    <%-mars.distanceFromSun %>
+    <p> away from the sun.</p><br>
+    <p>One year on mars is </p><%-mars.yearLength %><br>
+    <p>The radius of this planet is </p><%-mars.radius %><br>
+    <p>One day on this planet is equal to </p><%-mars.oneEarthDay %> <p> days on earth</p><br>
+    <p>This planet has </p><%-mars.moons %><p> moons</p> <br>
+    <%-mars.websiteLink %><br>
+
+
+    <%-include("partials/foot.ejs")%>
+</body>
+</html>

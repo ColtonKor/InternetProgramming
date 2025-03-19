@@ -1,0 +1,35 @@
+#villains{
+    display: flex;
+    justify-content: space-evenly;
+    transform: scale(.5);
+}
+
+h1{
+    text-align: center;
+    background-color: crimson;
+}
+
+h3{
+    text-align: center;
+    background-color: cornflowerblue;
+}
+h4{
+    text-align: center;
+}
+
+body{
+    background-color: rgb(224, 194, 220);
+}
+
+#birthPlace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nameConatainer{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7: Famous Quotes</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1 id="admin">Admin Section</h1>
+    <br><br>
+    <%-include("partials/nav.ejs")%>
+    <br><br>
+    <h2 id="list">Quotes</h2>
+    <br><br>
+
+    <% for(let i of quotes) { %>
+        <span>[ <a href="/quote/edit?quoteId=<%-i.quoteId %>">Update</a> ]  [ <a href="/quote/delete?quoteId=<%-i.quoteId %>">Delete</a> ] <%-i.quoteId %> <%-i.quote %> - <%-i.category %> :  <%-i.likes %></span><br>
+    <% } %>
+
+    <br><br>
+    <form action="/home">
+        <button>Back</button>
+    </form>
+</body>
+</html>

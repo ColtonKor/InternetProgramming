@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include("partials/head.ejs")%>
+</head>
+<body>
+    <h1 class="bg-primary text-center p-4 text-white">Quote Finder</h1>
+    
+    <br><br>
+    <form action="/searchByKeyword" id="keywordSearch">
+        <b>Keyword:</b>
+        <input type="text" name="keyword">
+        <button class="btn btn-outline-danger">Search by Keyword</button>
+    </form>
+
+    <br><br>
+    <form action="/searchByAuthor" id="authorSearch">
+        <b>Author:</b>
+        <select name="author">
+            <option value=""></option>
+            <% for (let row of rows) { %>
+                <option value="<%= row.firstName %> <%= row.lastName %>">
+                    <%= row.firstName %> <%= row.lastName %>
+                </option>
+            <% } %>
+        </select>
+        <button class="btn btn-outline-danger">Search by Author</button>
+    </form>
+
+    <br><br>
+    <form action="/searchByCategory" id="categorySearch">
+        <b>Category:</b> 
+        <select name="category">
+            <option value=""></option>
+            <% for (let row of rowsCategory) { %>
+                <option value="<%= row.category %>">
+                    <%= row.category %>
+                </option>
+            <% } %>
+        </select>
+        <button class="btn btn-outline-danger">Search by Category</button>
+    </form>
+
+
+    <br><br>
+    <form action="/searchByLikes" id="likeSearch">
+        <b>Likes:</b> 
+        <input type="number" name="minimum">
+        <input type="number" name="maximum">
+        <button class="btn btn-outline-danger">Search by Likes</button>
+    </form>
+
+
+    <h1 id="error"></h1>
+
+
+    <script src="/js/verification.js"></script>
+</body>
+</html>

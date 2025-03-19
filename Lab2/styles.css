@@ -1,0 +1,82 @@
+body{
+    background-image: url('C:/Users/tomko/Downloads/BallonsNumbers.png');
+    text-align: center;
+}
+
+h1{
+    font-size: 80px;
+    background-color: #000099;
+    color: white;
+    text-align: center;
+    width: 75%;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+h1:hover{
+    background-color: red;
+    transform: scale(1.2);
+    text-align: center;
+    width: 75%;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+button{
+    font-size: 50px;
+}
+
+input{
+    font-size: 50px;
+}
+
+button:hover{
+    background-color: rgb(0, 132, 255);
+    color: white;
+}
+
+p{
+    font-size: 50px;
+    
+}
+
+main{
+    background-color: lightsalmon;
+}
+
+h3{
+    font-size: 60px;
+    background-color: lightpink;
+    margin: 0 auto;
+    width: 35%;
+    border-radius: 50px;
+}
+
+h2{
+    font-size: 70px;
+    background-color: rgb(21, 34, 43);
+    margin: 0 auto;
+    width: 75%;
+    border-radius: 50px;
+}
+
+#Games{
+    font-size: 65x;
+    background-color: purple;
+    color: white;
+    margin: 0 auto;
+    width: 55%;
+    border-radius: 50px;
+}
+
+#Games:hover{
+    color: rgb(1, 255, 65);
+    background-color: blueviolet;
+}
+
+footer{
+    transform: scale(.75);
+    background-color: rgb(202, 120, 134);
+    width: 50%;
+    text-align: left;
+}

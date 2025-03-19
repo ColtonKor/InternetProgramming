@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7: Famous Quotes</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1 id="admin">Admin Section</h1>
+    <br><br>
+    <%-include("partials/nav.ejs")%>
+    <br><br>
+    <h2 id="add">New Author</h2>
+    <br><br>
+
+    <form action="/authors/new" method="POST" id="formBack">
+        First Name: <input type="text" name="firstName"><br>
+        Last Name:<input type="text" name="lastName"><br>
+        Date of Birth: <input type="date" name="dob"><br>
+        Date of Death: <input type="date" name="dod"><br>
+        Country: <input type="text" name="country"><br>
+        Sex: <input type="radio" name="Sex" value="F">F    <input type="radio" name="Sex" value="M">M<br>
+        Profession: <input type="text" name="profession"><br>
+        Portrait URL:
+        <textarea id="userInput" name="url" rows="4" cols="50" placeholder="Type your URL"></textarea><br>
+        Bio:
+        <textarea id="userInput" name="bio" rows="4" cols="50" placeholder="Type your Bio"></textarea><br>
+        <button>Add Author</button>
+    </form>
+
+    <br><br>
+    <form action="/home">
+        <button>Back</button>
+    </form>
+
+    <script src="/js/author.js"></script>
+</body>
+</html>

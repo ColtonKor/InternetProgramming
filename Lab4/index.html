@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Sign Up Form</h1>
+
+    <br><br><br>
+
+    <fieldset>
+      <legend>Sign Up</legend>
+      First Name: <input type="text" /><br />
+      Last Name: <input type="text" /><br />
+      Email: <input type="text" /><br />
+      Phone Number:<input type="text" /><br /><br />
+      Zip Code: <input type="text" id="zipCode" />
+      <span id="NoZipCode"></span>
+      <br />
+      City: <span id="city"></span>
+      <br />
+      Latitude: <span id="latitude"></span>
+      <br />
+      Longitude: <span id="longitude"></span> <br /><br />
+      State:
+      <select id="stateSelect"></select
+      ><br />
+      Select a County:
+      <select id="countySelect"></select
+      ><br />
+
+      Desired Username: <input type="text" id="username" />
+      <span id="available"></span><br />
+      Password: <input type="password" id="passwd" /> <span id="suggest"></span
+      ><br />
+      Type Password Again: <input type="password" id="vPass" /><br />
+      <input type="submit" value="Sign up!" id="submitBtn" />
+      <br />
+      <span id="passwdError"></span>
+    </fieldset>
+
+
+    <br><br><br>
+    <hr>
+    <footer>
+      <div>
+        <figure>
+          <img src="C:\Users\tomko\OneDrive\Pictures\Screenshots\Screenshot 2024-09-05 164339.png" alt="CSUMB" class="footer-image">
+        </figure>
+        <figure>
+          CST336 Internet Programming. 2024&copy; Korhummel & Longsworth.
+          <br>
+          <b>Disclaimer:</b> This website is for informational purposes only.
+        </figure>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include("partials/head.ejs")%>
+</head>
+<body>
+    <h1>Rick & Morty</h1>
+    <br>
+    <%-include("partials/nav.ejs")%>
+
+     
+    <form action="/Characters">
+        Pick a Character:
+        <select name="character">
+            <option></option>
+            <% for (let row of dataCharacters.results) { %>
+                <option value="<%= row.id %>">
+                    <%= row.name %>
+                </option>
+            <% } %>
+        </select>
+        <button>Learn About this Character</button>
+    </form>
+
+
+    
+    <form action="/Locations">
+        Pick a Location: 
+        <select name="location">
+            <option></option>
+            <% for (let row of dataLocations.results) { %>
+                <option value="<%= row.id %>">
+                    <%= row.name %>
+                </option>
+            <% } %>
+        </select>
+        <button>Learn About this Location</button>
+    </form>
+
+
+     
+    <form action="/Episodes">
+        Pick an Episode:
+        <select name="episode">
+            <option></option>
+            <% for (let row of dataEpisodes.results) { %>
+                <option value="<%= row.id %>">
+                    <%= row.name %>
+                </option>
+            <% } %>
+        </select>
+        <button>Learn About this Location</button>
+    </form>
+    
+
+
+    <%-include("partials/foot.ejs")%>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Make Array and Show it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "fast-shuffle": "^6.1.0",
+    "node-fetch": "^3.3.2",
+    "success-motivational-quotes": "^1.0.8"
+  }
+}

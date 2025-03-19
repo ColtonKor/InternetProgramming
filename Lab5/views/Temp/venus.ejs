@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include("partials/head.ejs")%>
+</head>
+<body>
+
+    <%-include("partials/nav.ejs")%>
+    <h2>Venus</h2>
+
+    <%-venus.description %>
+
+    <img src="<%-venus.image %>">
+
+    <%-venus.distanceFromSun %><p> away from the sun.</p><br>
+    <p>One year on venus is </p><%-venus.yearLength %><br>
+    <p>The radius of this planet is </p><%-venus.radius %><br>
+    <p>One day on this planet is equal to </p><%-venus.oneEarthDay %> <p> days on earth</p><br>
+    <p>This planet has </p><%-venus.moons %><p> moons</p> <br>
+    <%-venus.websiteLink %><br>
+
+
+    <%-include("partials/foot.ejs")%>
+</body>
+</html>

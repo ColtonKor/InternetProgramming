@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include("partials/head.ejs")%>
+</head>
+<body style="background-image: url('<%-data.urls.regular %>');">
+<!-- <body> -->
+    <%-include("partials/nav.ejs")%>
+    <br><br>
+
+    <form action="/spaceRock">
+        Select a Celestial Body: 
+        <select name="spaceRocks">
+            <option>Comets</option>
+            <option>Asteroids</option>
+        </select>
+        <br>
+        <button>Get Info</button>    
+    </form>
+
+
+    <%-include("partials/foot.ejs")%>
+</body>
+</html>

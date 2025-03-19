@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7: Famous Quotes</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1 id="admin">Admin Section</h1>
+    <br><br>
+    <%-include("partials/nav.ejs")%>
+    <br><br>
+    <h2 id="edit">Edit Author</h2>
+    <br><br>
+    
+    <form action="/author/edit" method="POST" id="formBack">
+        <input type="hidden" name="authorId" value="<%-authorData[0].authorId%>">
+        First Name: <input type="text" name="firstName" value="<%-authorData[0].firstName%>"><br>
+        Last Name:<input type="text" name="lastName" value="<%-authorData[0].lastName%>"><br>
+        <% let dobFormatted = new Date(authorData[0].dob);
+           dobFormatted = dobFormatted.getFullYear() + "-" + (dobFormatted.getMonth()+1).toString().padStart(2,"0") + "-" + (dobFormatted.getDate()).toString().padStart(2,"0");
+        %>
+        Date of Birth: <input type="date" name="dob" value="<%-dobFormatted%>"><br>
+        <% let dodFormatted = new Date(authorData[0].dod);
+           dodFormatted = dodFormatted.getFullYear() + "-" + (dodFormatted.getMonth()+1).toString().padStart(2,"0") + "-" + (dodFormatted.getDate()).toString().padStart(2,"0");
+        %>
+        Date of Death: <input type="date" name="dod"value="<%-dodFormatted%>"><br>
+        Country: <input type="text" name="country" value="<%-authorData[0].country%>"><br>
+        Sex: 
+        <input type="radio" name="Sex" value="F" <%= authorData[0].sex === 'F' ? 'checked' : '' %>>F
+        <input type="radio" name="Sex" value="M" <%= authorData[0].sex === 'M' ? 'checked' : '' %>>M<br>
+        Profession: <input type="text" name="profession" value="<%-authorData[0].profession%>">><br>
+        Portrait URL:
+        <textarea id="userInput" name="url" rows="10" cols="50" placeholder="Type your URL"><%-authorData[0].portrait%></textarea><br>
+        Bio:
+        <textarea id="userInput" name="bio" rows="10" cols="50" placeholder="Type your Bio"><%-authorData[0].biography%></textarea><br>
+        <button>Edit Author</button>
+    </form>
+
+
+    <br><br>
+    <form action="/authors">
+        <button>Back</button>
+    </form>
+
+    <script src="/js/author.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7: Famous Quotes</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1 id="admin">Admin Section</h1>
+    <br><br>
+    <%-include("partials/nav.ejs")%>
+    <br><br>
+    <h2 id="edit">Edit Quote</h2>
+    <br><br>
+    
+    <form action="/quote/edit" method="POST" id="formBack">
+        <input type="hidden" name="quoteId" value="<%-quoteData[0].quoteId%>">
+        Author: 
+        <select name="author">
+            <% for (let row of rows) { %>
+                <option value="<%= row.authorId %>" 
+                    <%= row.authorId === quoteData[0].authorId ? 'selected' : '' %>>
+                    <%= row.firstName %> <%= row.lastName %>
+                </option>
+            <% } %>
+        </select><br>
+        Category: 
+        <select name="category">
+            <% for (let row of rowsCategory) { %>
+                <option value="<%= row.category %>" 
+                    <%= row.category === quoteData[0].category ? 'selected' : '' %>>
+                    <%= row.category %>
+                </option>
+            <% } %>
+        </select><br>
+        Likes:<input type="number" name="likes" value="<%-quoteData[0].likes%>"><br>
+        Quote: 
+        <textarea id="userInput" name="Quote" rows="10" cols="50" placeholder="Type your Quote"><%-quoteData[0].quote%></textarea><br>
+        <button>Edit Quote</button>
+    </form>
+
+
+    <br><br>
+    <form action="/quotes">
+        <button>Back</button>
+    </form>
+
+    <script src="/js/quote.js"></script>
+</body>
+</html>

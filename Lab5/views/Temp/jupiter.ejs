@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include("partials/head.ejs")%>
+</head>
+<body>
+
+    <%-include("partials/nav.ejs")%>
+    <h2>Jupiter</h2>
+
+    <%-jupiter.description %>
+
+    <img src="<%-jupiter.image %>">
+
+    <%-jupiter.distanceFromSun %>
+    <p> away from the sun.</p><br>
+    <p>One year on jupiter is </p><%-jupiter.yearLength %><br>
+    <p>The radius of this planet is </p><%-jupiter.radius %><br>
+    <p>One day on this planet is equal to </p><%-jupiter.oneEarthDay %> <p> days on earth</p><br>
+    <p>This planet has </p><%-jupiter.moons %><p> moons</p> <br>
+    <%-jupiter.websiteLink %><br>
+
+
+    <%-include("partials/foot.ejs")%>
+</body>
+</html>

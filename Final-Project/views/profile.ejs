@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <%-include("partials/nav.ejs")%>
+    <hr style="border: 3px solid black" />
+    <div
+      style="display: flex; justify-content: space-between; align-items: center"
+    >
+      <div style="display: flex; align-items: center">
+        <img
+          class="rounded-circle border border-dark"
+          src="<%= user.pfp %>"
+          style="width: 20%; background-color: lightgray"
+        />
+        <h1 style="padding-left: 10px"><%= user.username %></h1>
+      </div>
+      <div>
+        <a href="/profile/edit">
+          <button class="btn btn-primary btn-sm">Edit Profile</button>
+        </a>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <div class="posts-container" style="width: 50%; margin: 0 auto">
+      <% if (posts && posts.length > 0) { %> <% for (let post of posts) { %>
+      <div class="post" id="postBackground">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 40%;
+          "
+        >
+          <div style="display: flex; align-items: center">
+            <img
+              class="rounded-circle border border-dark"
+              src="<%= user.pfp %>"
+              style="width: 20%; background-color: lightgray"
+            />
+            <h1 style="padding-left: 10px"><%= post.username %></h1>
+          </div>
+        </div>
+        <div class="content">
+          <p><%= post.content %></p>
+        </div>
+        <div class="image text-center">
+          <img src="<%-post.image%>" />
+        </div>
+        <br /><br /><br />
+        <div class="caption">
+          <p>Caption: <%= post.caption %></p>
+        </div>
+        <br />
+        <div class="post-footer">
+          <figure>
+            <span>
+              Posted: <%= new Date(post.datePosted).toLocaleDateString()%>
+            </span>
+          </figure>
+        </div>
+        <br />
+        <div class="comments-section">
+          <h4>Comments:</h4>
+          <% let postComments = comments.filter(comment => comment.postId ===
+          post.postId); %> <% if (postComments.length > 0) { %> <% for (let
+          postComment of postComments) { %>
+          <div class="comment">
+            <div style="display: flex; align-items: center">
+              <img
+                class="rounded-circle border border-dark"
+                src="<%= postComment.profilePicture %>"
+                style="width: 5%; background-color: lightgray"
+              />
+              <h1 style="padding-left: 10px; font-size: 20px">
+                <%= postComment.username %>
+              </h1>
+            </div>
+            <p><%= postComment.text %></p>
+            <div>
+              <form action="/likeComment" method="POST">
+                <input type="hidden" name="commentId" value="<%= postComment.commentId %>">
+                <button type="submit" style="background:none; border:none; cursor:pointer;">                
+                  ❤️ <%= postComment.likes %>
+                </button>
+                <span>                   <%= new Date(postComment.datePosted).toLocaleDateString() %></span>
+              </form>
+            </div>
+          </div>
+          <% } %> <% } else { %>
+          <p class="comment">No comments yet!</p>
+          <% } %>
+        </div>
+        <div class="text-center">
+          <a href="/profile/deletePost?postId=<%= post.postId %>">
+            <button class="btn btn-danger btn-sm">
+              <i class="fas fa-trash"></i>
+            </button>
+          </a>
+        </div>
+        <br />
+      </div>
+      <br /><br /><br />
+      <% } %> <% } else { %>
+      <p>No posts yet!</p>
+      <% } %>
+    </div>
+  </body>
+</html>

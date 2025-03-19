@@ -1,0 +1,86 @@
+body {
+    background-image: url('../img/Portal.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+h1{
+    text-align: center;
+    background-color: cyan;
+    width: 75%;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+h2{
+    text-align: center;
+    background-color: orchid;
+    width: 50%;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+h3{
+    text-align: center;
+    background-color: rgb(85, 80, 80);
+    color:aqua;
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+}
+
+nav{
+    text-align: center;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+    border: 2px solid rgb(94, 255, 0);
+}
+
+a{
+    color: black;
+    background-color: red;
+    text-decoration: none;
+    width: 25%;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    margin-bottom: 50px;
+}
+
+a:hover{
+    background-color: darkred;
+}
+
+form{
+    width: 35%;
+    text-align: center;
+    background-color: greenyellow;
+    display: block;
+    margin: 0 auto;
+}
+
+footer{
+    background-color: aqua;
+    display: block;
+    margin: 0 auto;
+}
+
+hr{
+    border: 2px solid rgb(0, 0, 0);
+}
+
+figcaption{
+    text-align: center;
+    background-color: rgb(94, 255, 0);
+}

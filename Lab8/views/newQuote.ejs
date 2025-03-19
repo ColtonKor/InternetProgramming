@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7: Famous Quotes</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1 id="admin">Admin Section</h1>
+    <br><br>
+    <%-include("partials/nav.ejs")%>
+    <br><br>
+    <h2 id="add">New Quotes</h2>
+    <br><br>
+
+    <form action="/quotes/new" method="POST" id="formBack">
+        Author: 
+        <select name = "author">
+            <% for (let row of rows) { %>
+                <option value="<%= row.authorId %>">
+                    <%= row.firstName %> <%= row.lastName %>
+                </option>
+            <% } %>
+        </select><br>
+        Category: 
+        <select name = "category">
+            <% for (let row of rowsCategory) { %>
+                <option value="<%= row.category %>">
+                    <%= row.category %>
+                </option>
+            <% } %>
+        </select><br>
+        Likes:<input type="number" name="likes"><br>
+        Quote: 
+        <textarea id="userInput" name="Quote" rows="4" cols="50" placeholder="Type your Quote"></textarea><br>
+        <button>Add Quote</button>
+    </form>
+
+    <br><br>
+    <form action="/home">
+        <button>Back</button>
+    </form>
+
+    <script src="/js/quote.js"></script>
+</body>
+</html>

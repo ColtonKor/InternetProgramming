@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include("partials/head.ejs")%>
+</head>
+<body>
+    <h1 class="bg-primary text-center p-4 text-white">Quotes</h1>
+
+    <%for (let row of rows){ %>
+        <p><%-row.quote %> - <a class="authorLink" href="#" authorId="<%-row.authorId %>"><%-row.firstName %> <%-row.lastName %></a></p>
+        <br>
+    <%} %>
+    <div class="modal fade" id="authorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="authorName">Modal title</h1>
+                </div>
+                <div class="modal-body">
+                    <div id="authorInfo">
+                        <img id="authorImage">
+                        <br>
+                        <span id="dob"></span>
+                        <br>
+                        <span id="dod"></span>
+                        <br>
+                        <span id="country"></span>
+                        <br>
+                        <span id="sex"></span>
+                        <br>
+                        <span id="profession"></span>
+                        <br>
+                        <span id="bio"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <form action="/">
+        <button>RETURN</button>
+    </form>
+
+
+    <script src="/js/modal.js"></script>
+
+</body>
+</html>

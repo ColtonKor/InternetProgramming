@@ -1,0 +1,77 @@
+.google{
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1{
+    background-color: #000099;
+      color: white;
+      text-align: center;
+      width: 75%;
+      border-radius: 50px;
+      margin: 0 auto;
+}
+  h1:active{
+    background-color: teal;
+
+  }
+    span{
+      color: darkred;
+      font-size: 1.4em;
+    }
+    .programImage{
+      width: 75%;
+      height: 350px;
+      border: 5px solid black;
+    }
+    figure {
+      width: 30%;
+    }
+    #programsBox{
+      display: flex;
+      /* display images next to each other */
+      justify-content: space-evenly;
+    }
+    a{
+      color: blueviolet;
+      text-align: center;
+      width: 75%;
+      border-radius: 50px;
+      margin: 0 auto;
+    }  
+  iframe{
+    display: block;
+    margin: 0 auto;
+  }
+  h3{
+    text-align: center;
+    border: 2px solid black;
+  }
+  a:hover{
+    color: red;
+  }
+  body{
+    background-color: rgb(236, 228, 228);
+  }
+  table{
+    margin: 0 auto;
+    border: "9";
+  }
+  ul{
+    display: block;
+    margin: 0 auto;
+  }
+footer {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: blue;
+}
+img:hover{
+  transform: scale(1.2);
+}
+.currentPage{
+    /* font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4; */
+    color: black;
+}

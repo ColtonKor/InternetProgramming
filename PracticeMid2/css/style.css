@@ -1,0 +1,20 @@
+#randomQuoteDiv {
+    background-color: lightblue;
+    border: 2px solid darkblue;
+    text-align: center;
+}
+
+#authorInfoDiv {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+img {
+    width: 50%;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

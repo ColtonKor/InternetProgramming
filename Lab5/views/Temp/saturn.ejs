@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include("partials/head.ejs")%>
+</head>
+<body>
+
+    <%-include("partials/nav.ejs")%>
+    <h2>Saturn</h2>
+
+    <%-saturn.description %>
+
+    <img src="<%-saturn.image %>">
+
+    <%-saturn.distanceFromSun %>
+    <p> away from the sun.</p><br>
+    <p>One year on saturn is </p><%-saturn.yearLength %><br>
+    <p>The radius of this planet is </p><%-saturn.radius %><br>
+    <p>One day on this planet is equal to </p><%-saturn.oneEarthDay %> <p> days on earth</p><br>
+    <p>This planet has </p><%-saturn.moons %><p> moons</p> <br>
+    <%-saturn.websiteLink %><br>
+
+
+    <%-include("partials/foot.ejs")%>
+</body>
+</html>

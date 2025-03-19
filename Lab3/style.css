@@ -1,0 +1,118 @@
+#Q1programsBox,
+#Q2programsBox,
+#Q3programsBox,
+#Q4programsBox,
+#Q5programsBox{
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 25px;
+    height: auto;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+#question1, #question2, #question3, #question4, #question5{
+    text-align: left;
+    font-size: medium;
+}
+
+#q4Choices, #q2Choices{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    gap: 20px;
+}
+
+#numberBox, #q1{
+    align-items: center;
+    font-size: 15px;
+}
+
+input{
+    transform: scale(1.5);
+    font-size: 50px;
+}
+
+#inputContainer, #Q2Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#squaredContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+}
+
+button:hover{
+    transform: scale(1.5);
+    background-color: rgb(108, 238, 118);
+}
+
+h1, h2, h3{
+    font-family: "Papyrus", fantasy;
+    text-align: center;
+    text-shadow: black;
+}
+
+h1{
+    animation: colorChange 5s infinite;
+}
+h2{
+    color: green;
+    font-size: 25px;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: blue;
+    } 25% {
+        background-color: green;
+    } 50% {
+        background-color: yellow;
+    } 100% {
+        background-color: red;
+    }
+  }
+
+#footer-text{
+    transform: scale(1);
+    display: none;
+    justify-content: left;
+}
+
+.footer-image{
+    width: 75px;
+    height: auto;
+}
+
+hr{
+    border-color: black;
+    border: dashed;
+}
+
+#squared{
+    transform: scale(1.3);
+}
+
+#TotalAttempts{
+    color: black;
+    font-size: 50px;
+}
+

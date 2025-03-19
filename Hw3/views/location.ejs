@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include("partials/head.ejs")%>
+</head>
+<body>
+    <h1>Rick & Morty</h1>
+    <br>
+    <h2>Locations</h2>
+    <%-include("partials/nav.ejs")%>
+    <h3>Location Name: <%-data.name%></h3>
+    <h3>Location Type: <%-data.type%></h3>
+    <h3>Dimension: <%-data.dimension%></h3>
+    <h3>Inhabitants: </h3>
+    <div>
+        <%for(let row of data.charactersData){%>
+            <figure>
+                <img src=<%-row.image%>>
+                <figcaption><%-row.name%></figcaption>
+            </figure>
+        <%}%>
+    </div>
+    <%-include("partials/foot.ejs")%>
+</body>
+</html>

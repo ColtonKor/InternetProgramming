@@ -1,0 +1,77 @@
+div{
+    display: flex;
+    justify-content:center;
+    background-color: grey;
+    width: 75%;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+h1,h2{
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+h2{
+    width: 40%;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+#login{
+    background-color: rgb(0, 119, 119);
+    color: white;
+}
+#edit{
+    background-color: red;
+    color: white;
+}
+#add{
+    background-color: blueviolet;
+    color: white;
+}
+#admin{
+    background-color: deeppink;
+    color: white;
+}
+#list{
+    background-color: coral;
+    color: white;
+}
+span{
+    display: block;
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+#addAuthor{
+    background-color: rgb(17, 0, 255);
+    color: white;
+}
+#addQuote{
+    background-color: rgb(3, 124, 13);
+    color: white;
+}
+#displayAuthor{
+    background-color: red;
+    color: white;
+}
+#displayQuote{
+    background-color: rgb(92, 3, 95);
+    color: white;
+}
+#logout{
+    background-color: rgb(109, 71, 0);
+    color: white;
+}
+button:hover{
+    transform: scale(1.2);
+}
+#formBack{
+    width: 30%;
+    background-color: deepskyblue;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+body{
+    background-color: blanchedalmond;
+}

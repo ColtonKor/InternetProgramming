@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include("partials/head.ejs")%>
+</head>
+<body>
+    <h1>Rick & Morty</h1>
+    <br>
+    <h2>Characters</h2>
+    <%-include("partials/nav.ejs")%>
+
+    <img src=<%-data.image%>
+    <br><br>
+    <h3>Name: <%-data.name%></h3>
+
+    <h3>Current Satus: <%-data.status%></h3>
+
+    <h3>Race: <%-data.species%></h3>
+    <h3>Gender: <%-data.gender%></h3>
+
+
+    <%-include("partials/foot.ejs")%>
+</body>
+</html>

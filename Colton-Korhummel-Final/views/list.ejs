@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <%-include("partials/nav.ejs")%>
+    <h1>List</h1>
+
+    <form method="POST" action="/addPokemon">
+        Name: <input type="text" name="name"> <br>
+        Description: <input type="text" name="description"> <br>
+        Type: 
+        <select name="type">
+            <% for (let poke of pokemonType){ %>
+                <option value= "<%-poke.elementId%>"> <%- poke.elementName %> </option>
+            <% } %>
+        </select> <br>
+        Move Set: <input type="text" name="moveSet"> <br>
+        Img Name: <input type="text" name="imgName"> <br>
+        Score: <input type="number" name="score"> <br>
+        <button type="submit">Add Pokemon</button>
+    </form>
+
+    <div>
+        <% for (let poke of pokemon) { %>
+            <figure>
+                <input type="hidden" name="pokemon" value="<%- poke.monsterId %>">
+                Name: <%- poke.name %> <br>
+                <img src="../img/img/<%- poke.imgName %>"> <br>
+                Description: <%- poke.description %> <br>
+                Move Set: <%- poke.moveSet %> <br>
+                Date Caught: <%- poke.firstCaught %> <br>
+                Score: <%- poke.score %> <button id="updatePoke">Update</button>
+                <br><br><br>
+            </figure>
+        <%}%> 
+    </div>
+</body>
+</html>
